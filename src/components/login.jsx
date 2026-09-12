@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Lock, Unlock, Sparkles, ArrowLeft } from "lucide-react";
 
-const CORRECT_ANSWERS = ["19/6/24", "19/06/24", "19/6/2024", "19/06/2024"];
+const CORRECT_ANSWERS = ["2024-06-19"];
 
 export default function BirthdayGate() {
   const [value, setValue] = useState("");
@@ -45,22 +45,17 @@ export default function BirthdayGate() {
             </div>
 
             <h1
-              className="text-center text-[#F5F0E6] text-3xl mb-2"
+              className="text-center text-[#F5F0E6] text-2xl mb-2 leading-snug"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
-              תזכורת קטנה, לפני שנכנסים
+              اليوم يوم مميز بالنسبة إليّ.
             </h1>
             <p className="text-center text-[#B8AAD6] text-sm mb-8 leading-relaxed">
-              רק מי שיודע את התאריך הנכון עובר פנימה
+              عشان نكمل، لازم تكتب تاريخ مميز إلنا. ❤️
             </p>
 
-            <label className="block text-[#B8AAD6] text-sm mb-2">
-              הזן/י תאריך בפורמט DD/MM/YY
-            </label>
             <input
-              type="text"
-              inputMode="numeric"
-              placeholder="19/6/24"
+              type="date"
               value={value}
               onChange={(e) => setValue(e.target.value)}
               className={`w-full text-center text-lg tracking-wider rounded-lg bg-[#0F0A1D] border ${
@@ -68,6 +63,7 @@ export default function BirthdayGate() {
                   ? "border-[#C9526B]"
                   : "border-[#3E2E63]"
               } text-[#F5F0E6] placeholder-[#5C4E80] py-3 px-4 outline-none focus:border-[#E8B94A] transition-colors`}
+              style={{ colorScheme: "dark" }}
               autoFocus
             />
 
